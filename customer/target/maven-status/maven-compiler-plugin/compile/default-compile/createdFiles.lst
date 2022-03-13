@@ -1,0 +1,11 @@
+com\drewett\microservices\customer\domain\CustomerRepository.class
+com\drewett\microservices\customer\api\CreateCustomerResponse.class
+com\drewett\microservices\customer\api\GetCustomerResponse.class
+com\drewett\microservices\customer\api\UpdateCustomerResponse.class
+com\drewett\microservices\customer\CustomerMicroserviceApplication.class
+com\drewett\microservices\customer\api\UpdateCustomerRequest.class
+com\drewett\microservices\customer\controllers\CustomerRestController.class
+com\drewett\microservices\customer\services\CustomerService.class
+com\drewett\microservices\customer\services\CustomerNotFoundException.class
+com\drewett\microservices\customer\api\CreateCustomerRequest.class
+com\drewett\microservices\customer\domain\Customer.class

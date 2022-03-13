@@ -1,0 +1,4 @@
+com\drewett\microservices\customer\services\CustomerServiceTest.class
+com\drewett\microservices\customer\CustomerMicroserviceApplicationTest.class
+com\drewett\microservices\customer\controllers\CustomerRestControllerTest.class
+com\drewett\microservices\customer\domain\CustomerRepositoryTest.class

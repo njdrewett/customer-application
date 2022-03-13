@@ -1,0 +1,81 @@
+openapi: "3.0.0"
+
+info:
+  title: Customer API
+  description: Customer API
+  contact:
+    name: Neil Drewett
+    email: NDrewett@sky.com
+  version: 1.0.0
+tags:
+  - name: "Customers"
+paths:
+  /customer:
+    description: Customer 
+    get:
+      description: Operation to retrieve Customer
+      parameters:
+        - in: query
+          name: customername
+          required: true
+          schema:
+            type: string
+            example: neil
+      responses:
+        200:
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/customers'
+    post:
+       description: Add a new Customer
+       requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/customer'
+       responses:
+        201:
+          description: Successfully added
+  /customer{id}:
+    description: Get Customer by Id
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: 
+            type: number
+      responses:
+        200:
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  properties:
+                    CustomerID:
+                      type: number
+                      example: 1
+                    CustomerName:
+                      type: string
+                      example: Neil
+components:
+  schemas:
+    customer:
+      type: object
+      properties:
+        CustomerID:
+          type: number
+          example: 1
+        CustomerName:
+          type: string
+          example: Neil
+    customers:
+      type: array
+      items:
+        $ref: '#/components/schemas/customer'
+          
+                              
